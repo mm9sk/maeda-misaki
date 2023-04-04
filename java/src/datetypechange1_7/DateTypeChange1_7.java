@@ -22,7 +22,7 @@ public class DateTypeChange1_7 {
 		double pi = 3.14;
 		System.out.println(pi * 3);
 		int integer = (int)pi;
-		System.out.println(pi);
+		System.out.println(integer);
 		
 //		問３）
 //		①double型の変数を定義し、「2 + 6.0」を代入して下さい。
