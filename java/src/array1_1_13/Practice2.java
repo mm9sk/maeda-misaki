@@ -26,6 +26,9 @@ public class Practice2 {
 		b = a;
 		System.out.println(b[2]);
 		
+		a[3]=10;
+		System.out.println(a[3]);
+		
 		System.out.println("配列aの要素数は、" + a.length + "です。");
 
 	}
