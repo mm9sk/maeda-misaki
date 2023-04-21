@@ -15,38 +15,38 @@ package multidimensional_array1_15;
 public class Practice1_15 {
 
 	public static void main(String[] args) {
-		int[][]test = new int[4][];
+		int[][]test = new int[4][];//配列を作成
 		test[0] = new int[3];
 		test[1] = new int[3];
 		test[2] = new int[3];
 		test[3] = new int[3];
 		
-		test[0][0] = 64;
-		test[0][1] = 73;
-		test[0][2] = 69;
-		test[1][0] = 58;
-		test[1][1] = 81;
-		test[1][2] = 75;
-		test[2][0] = 86;
-		test[2][1] = 68;
-		test[2][2] = 79;
-		test[3][0] = 72;
-		test[3][1] = 55;
-		test[3][2] = 80;
+		test[0][0] = 64;//生徒1の国語の点数を格納
+		test[0][1] = 73;//生徒1の数学の点数を格納
+		test[0][2] = 69;//生徒1の英語の点数を格納
+		test[1][0] = 58;//生徒2の国語の点数を格納
+		test[1][1] = 81;//生徒2の数学の点数を格納
+		test[1][2] = 75;//生徒2の英語の点数を格納
+		test[2][0] = 86;//生徒3の国語の点数を格納
+		test[2][1] = 68;//生徒3の数学の点数を格納
+		test[2][2] = 79;//生徒3の英語の点数を格納
+		test[3][0] = 72;//生徒4の国語の点数を格納
+		test[3][1] = 55;//生徒4の数学の点数を格納
+		test[3][2] = 80;//生徒4の英語の点数を格納
 		
 		for (int i = 0 ; i < 4 ; i++){
 		      System.out.println("生徒"+ (i + 1) + ":国語"+test[i][0]+"点、"+ "数学"+test[i][1]+"点、"+ "英語"+test[i][2]+"点");
-			}
+			}//格納した点数を表示
 		
-		System.out.println(""); 
+		System.out.println(""); //改行
 		
-		int japanese = (test[0][0] + test[1][0] + test[2][0] + test[3][0])/4;
+		int japanese = (test[0][0] + test[1][0] + test[2][0] + test[3][0])/4;//国語の平均点を表示
 		System.out.println("国語の平均点は"+japanese+"点です。");
 		
-		int math = (test[0][1] + test[1][1] + test[2][1] + test[3][1])/4;
+		int math = (test[0][1] + test[1][1] + test[2][1] + test[3][1])/4;//数学の平均点を表示
 		System.out.println("数学の平均点は"+math+"点です。");
 		
-		int english = (test[0][2] + test[1][2] + test[2][2] + test[3][2])/4;
+		int english = (test[0][2] + test[1][2] + test[2][2] + test[3][2])/4;//英語の平均点を表示
 		System.out.println("英語の平均点は"+english+"点です。");
 		
 		
