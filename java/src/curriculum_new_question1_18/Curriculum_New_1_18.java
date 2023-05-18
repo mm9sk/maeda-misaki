@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Curriculum_New_1_18 {
 	// Q1：引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッドを作成してください。
-	public static void msg(String message1, int message2) {
-		System.out.println(message1 + message2);
+	public static void msg(String message1, String message2, int message3) {
+		System.out.println(message1 + message2 + message3);
 	}
 
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
@@ -40,7 +40,7 @@ public class Curriculum_New_1_18 {
 		int[] random1 = new int[random];
 		// 格納した値を順番にコンソールで出力
 		for (int j = 0; j < random; j++) {
-			int num3 = rnd.nextInt(101) + 1;
+			int num3 = rnd.nextInt(100) + 1;
 			random1[j] = num3;
 			System.out.println(num3);
 		}
@@ -56,8 +56,9 @@ public class Curriculum_New_1_18 {
 		for (int i = 0; i < average.length; i++) {
 			total += average[i];
 		}
-		// 合計した配列の平均を引数avgに代入
+		// 合計した配列の平均を引数avgに代入しコンソールに出力
 		double avg = (double) total / average.length;
+		System.out.println(avg);
 		return avg;
 	}
 
@@ -74,22 +75,28 @@ public class Curriculum_New_1_18 {
 	public static void main(String[] args) {
 
 		// Q1呼び出し
-		msg("Hello JavaSE ", 11);
+		msg("Hello ", "JavaSE ", 11);
+		System.out.println("");
 
 		// Q2呼び出し
 		calculation1(2);
+		System.out.println("");
 
 		// Q3呼び出し
 		array(5);
+		System.out.println("");
 
 		// Q4呼び出し
 		calculation1(1.4, 1.6);
+		System.out.println("");
 
 		// Q5呼び出し
 		int[] random1 = score(5);
+		System.out.println("");
 
 		// Q6呼び出し
 		double avg = average(random1);
+		System.out.println("");
 
 		// Q7呼び出し
 		msg1(avg);
