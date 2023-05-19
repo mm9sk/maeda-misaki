@@ -15,12 +15,10 @@ public class Curriculum_New_1_18 {
 	}
 
 	// Q3：引数として整数の配列を渡すと、受け取った値を順番にコンソールに出力するメソッドを作成してください
-	public static void array(int array) {
-		// 配列aを作成し1～5を格納
-		int[] a = { 1, 2, 3, 4, 5 };
+	public static void array(int[] array) {
 		// for文を使用し順番にコンソールへ出力
-		for (int i = 0; i < array; i++) {
-			System.out.println(a[i]);
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
 		}
 	}
 
@@ -76,27 +74,22 @@ public class Curriculum_New_1_18 {
 
 		// Q1呼び出し
 		msg("Hello ", "JavaSE ", 11);
-		System.out.println("");
 
 		// Q2呼び出し
 		calculation1(2);
-		System.out.println("");
 
 		// Q3呼び出し
-		array(5);
-		System.out.println("");
+		int[] num4 = { 1, 2, 3 };
+		array(num4);
 
 		// Q4呼び出し
 		calculation1(1.4, 1.6);
-		System.out.println("");
 
 		// Q5呼び出し
 		int[] random1 = score(5);
-		System.out.println("");
 
 		// Q6呼び出し
 		double avg = average(random1);
-		System.out.println("");
 
 		// Q7呼び出し
 		msg1(avg);
