@@ -27,7 +27,7 @@ public class Execution1_22 {
 		// Process1_22クラスを呼び出してコンソールに出力
 		Process1_22 msg1 = new Process1_22();
 		System.out.println(msg1.msg1);
-		System.out.println(msg1.msg2+msg1.fdate1+msg1.msg3);
+		System.out.println(msg1.msg2 + msg1.fdate1 + msg1.msg3);
 
 	}
 

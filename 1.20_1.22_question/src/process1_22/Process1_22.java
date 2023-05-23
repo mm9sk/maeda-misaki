@@ -5,8 +5,6 @@ import java.time.format.DateTimeFormatter;
 
 // 処理用パッケージ
 public class Process1_22 {
-
-	
 	public String msg1;
 	public String msg2;
 	public String msg3;
