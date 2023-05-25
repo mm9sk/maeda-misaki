@@ -12,38 +12,9 @@ package question1_23;
 */
 
 public class Theme2_1_23 {
-	// フィールドに各項目の変数を定義
-	private String name;
-	private double length;
-	private int speed;
-
-	// getterとsetter
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setLenght(double length) {
-		this.length = length;
-	}
-
-	public double getLenght() {
-		return length;
-	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
 
 	public static void main(String[] args) {
-		Theme2_1_23 gn = new Theme2_1_23();
+		Process1_23 gn = new Process1_23();
 
 		// nameに"ライオン"を代入
 		gn.setName("ライオン");
