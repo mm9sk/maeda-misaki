@@ -46,4 +46,11 @@ public class Bean1_25 {
 	public int getDef() {
 		return def;
 	}
+
+	public String msg;
+
+	// コンストラクタを生成
+	public Bean1_25() {
+		this.msg = "さあ冒険に出かけよう！";
+	}
 }

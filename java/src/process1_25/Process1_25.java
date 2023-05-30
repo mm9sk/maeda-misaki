@@ -29,7 +29,7 @@ import java.util.Scanner;
 
 // 処理用パッケージ
 public class Process1_25 {
-	
+
 	// Bean1_25クラスを呼び出し
 	Bean1_25 gs = new Bean1_25();
 
@@ -65,14 +65,14 @@ public class Process1_25 {
 		gs.setDef(rand());
 		return gs.getDef();
 	}
-	
+
 	// スーパークラスを作成
 	class superClass {
 		public void dispName() {
 			System.out.print("名前を入力してください＞");
 		}
 	}
-	
+
 	// サブクラスを作成
 	class subClass extends superClass {
 		// dispNameメソッドのオーバーライド
@@ -92,13 +92,11 @@ public class Process1_25 {
 			System.out.println("素早さ:" + spd());
 			System.out.println("防御力:" + def());
 			System.out.println();
-			System.out.println("さあ冒険に出かけよう！");
 		}
 	}
-	
+
 	public void display() {
 		superClass name = new subClass();
 		name.dispName();
 	}
-
 }
