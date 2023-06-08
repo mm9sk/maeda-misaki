@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 /*
 
-	コンソールに下記が入力されたときにコンソール出力結果がコンソールに表示されるように作ってください
-	ライオン:2.1:80,ゾウ:3.2:40,パンダ:1.9:30,チンパンジー:0.94:25,シマウマ:2.4:65,インコ:0.1:50
+コンソールに下記が入力されたときにコンソール出力結果がコンソールに表示されるように作ってください
+ライオン:2.1:80,ゾウ:3.2:40,パンダ:1.9:30,チンパンジー:0.94:25,シマウマ:2.4:65,インコ:0.1:50
 	
-	コンソール出力結果
+コンソール出力結果
 	
 コンソールに文字を入力してください
 動物名：ライオン
@@ -51,38 +51,43 @@ public class Process {
 		String scanner1 = sc.next();
 		sc.close();
 
-		// スキャナーで読み込んだ文字を":"で分割し、その後","で分割し配列に代入
+		// スキャナーで読み込んだ文字分割し配列に代入
 		String[] date = scanner1.split("[:,]");
-
+		
 		// 画面表示
-		System.out.println("動物名：" + date[0]);
-		System.out.println("体長：" + date[1] + "m");
-		System.out.println("速度：" + date[2] + "km/h");
-		System.out.println("学名：パンテラ レオ");
-		System.out.println("");
-		System.out.println("動物名：" + date[3]);
-		System.out.println("体長：" + date[4] + "m");
-		System.out.println("速度：" + date[5] + "km/h");
-		System.out.println("学名：ロキソドンタ・サイクロティス");
-		System.out.println("");
-		System.out.println("動物名：" + date[6]);
-		System.out.println("体長：" + date[7] + "m");
-		System.out.println("速度：" + date[8] + "km/h");
-		System.out.println("学名：アイルロポダ・メラノレウカ");
-		System.out.println("");
-		System.out.println("動物名：" + date[9]);
-		System.out.println("体長：" + date[10] + "m");
-		System.out.println("速度：" + date[11] + "km/h");
-		System.out.println("学名：パン・トゥログロディテス");
-		System.out.println("");
-		System.out.println("動物名：" + date[12]);
-		System.out.println("体長：" + date[13] + "m");
-		System.out.println("速度：" + date[14] + "km/h");
-		System.out.println("学名：チャップマンシマウマ");
-		System.out.println("");
-		System.out.println("動物名：" + date[15]);
-		System.out.println("体長：" + date[16] + "m");
-		System.out.println("速度：" + date[17] + "km/h");
-		System.out.println("学名：不明");
+		for(int i = 0; i < date.length; i++) {
+			if(i == 0 || i == 3 || i == 6 || i == 9 || i == 12 || i == 15) {
+				System.out.println("動物名：" + date[i]);
+			}else if(i == 1 || i == 4 || i == 7 || i == 10 || i == 13 || i == 16){
+				System.out.println("体長：" + date[i] + "m");
+			}else if(i == 2 || i == 5 || i == 8 || i == 11 || i == 14 || i == 17){
+				System.out.println("速度：" + date[i] + "km/h");
+			}switch(i) {
+			case 2:
+				System.out.println("学名：パンテラ レオ");
+				System.out.println("");
+				break;
+			case 5:
+				System.out.println("学名：ロキソドンタ・サイクロティス");
+				System.out.println("");
+				break;
+			case 8:
+				System.out.println("学名：アイルロポダ・メラノレウカ");
+				System.out.println("");
+				break;
+			case 11:
+				System.out.println("学名：パン・トゥログロディテス");
+				System.out.println("");
+				break;
+			case 14:
+				System.out.println("学名：チャップマンシマウマ");
+				System.out.println("");
+				break;
+			case 17:
+				System.out.println("学名：不明");
+				System.out.println("");
+				break;
+			}
+		}
 	}
 }
