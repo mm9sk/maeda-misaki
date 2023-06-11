@@ -49,45 +49,45 @@ public class Process {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("コンソールに文字を入力してください");
 		String scanner1 = sc.next();
-		sc.close();
 
 		// スキャナーで読み込んだ文字分割し配列に代入
-		String[] date = scanner1.split("[:,]");
-		
-		// 画面表示
-		for(int i = 0; i < date.length; i++) {
-			if(i == 0 || i == 3 || i == 6 || i == 9 || i == 12 || i == 15) {
-				System.out.println("動物名：" + date[i]);
-			}else if(i == 1 || i == 4 || i == 7 || i == 10 || i == 13 || i == 16){
-				System.out.println("体長：" + date[i] + "m");
-			}else if(i == 2 || i == 5 || i == 8 || i == 11 || i == 14 || i == 17){
-				System.out.println("速度：" + date[i] + "km/h");
-			}switch(i) {
-			case 2:
-				System.out.println("学名：パンテラ レオ");
-				System.out.println("");
-				break;
-			case 5:
-				System.out.println("学名：ロキソドンタ・サイクロティス");
-				System.out.println("");
-				break;
-			case 8:
-				System.out.println("学名：アイルロポダ・メラノレウカ");
-				System.out.println("");
-				break;
-			case 11:
-				System.out.println("学名：パン・トゥログロディテス");
-				System.out.println("");
-				break;
-			case 14:
-				System.out.println("学名：チャップマンシマウマ");
-				System.out.println("");
-				break;
-			case 17:
-				System.out.println("学名：不明");
-				System.out.println("");
-				break;
-			}
+		String[] animalList = scanner1.split(",");
+
+		for (String animal : animalList) {
+			String[] date = animal.split(":");
+			printResult(date);
+		}
+		sc.close();
+	}
+
+	// 画面表示
+	public static void printResult(String[] date) {
+		System.out.println("動物名：" + date[0]);
+		System.out.println("体長：" + date[1] + "m");
+		System.out.println("速度：" + date[2] + "km/h");
+		printSchool(date[0]);
+	}
+
+	public static void printSchool(String date) {
+		switch (date) {
+		case "ライオン":
+			System.out.println("学名：パンテラ レオ\n");
+			break;
+		case "ゾウ":
+			System.out.println("学名：ロキソドンタ・サイクロティス\n");
+			break;
+		case "パンダ":
+			System.out.println("学名：アイルロポダ・メラノレウカ\n");
+			break;
+		case "チンパンジー":
+			System.out.println("学名：パン・トゥログロディテス\n");
+			break;
+		case "シマウマ":
+			System.out.println("学名：チャップマンシマウマ\n");
+			break;
+		default:
+			System.out.println("学名：不明\n");
+			break;
 		}
 	}
 }
