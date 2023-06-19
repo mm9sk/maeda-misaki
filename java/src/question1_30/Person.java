@@ -1,19 +1,42 @@
+
+
+
 package question1_30;
 
+import question1_31.Bicycle;
+import question1_31.Car;
+
 class Person {
-	// 問題1：インスタンスフィールドを定義してください
+	// インスタンスフィールドを定義
 	String name;
 	int age;
 	double height;
-	// 問題4：インスタンスフィールド「weight」を定義し、コンストラクタの中で値をセットしてください（double型）
 	double weight;
+	private String fullName;
 
-	// 問題2：コンストラクタを定義してください
-	// 問題3：コンストラクタの中で各インスタンスフィールドに値をセットしてください
+	// コンストラクタを定義しインスタンスフィールドに値をセット
 	Person(String name, int age, double height, double weight) {
 		this.name = name;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
 	}
+	
+	// fullNameメソッドを定義
+	public String fullName() {
+		this.fullName = name;
+		return fullName;
+	}
+	
+	// buyメソッドを定義
+	public void buy(Car car) {
+		car.setOwner(this.fullName);
+		System.out.println(car.getOwner() + "が購入しました");
+	}
+
+	public void buy(Bicycle bicycle) {
+		bicycle.setOwner(this.fullName);
+		System.out.println(bicycle.getOwner() + "が購入しました");
+	}
+
 }
