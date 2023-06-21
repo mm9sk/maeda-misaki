@@ -2,8 +2,8 @@ package question1_31;
 
 class Main {
 	public static void main(String[] args) {
-		Person person1 = new Person("鈴木", 20, 1.7, 60);
-		Person person2 = new Person("山田", 20, 1.7, 60);
+		Person person1 = new Person("鈴木", "太郎", 20, 1.7, 60);
+		Person person2 = new Person("山田", "花子", 22, 1.5, 40);
 
 		// car,bicycleをインスタンス化
 		Car car = new Car();

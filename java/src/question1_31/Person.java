@@ -2,15 +2,17 @@ package question1_31;
 
 class Person {
 	// インスタンスフィールドを定義
-	String name;
+	String name1;
+	String name2;
 	int age;
 	double height;
 	double weight;
 	private String fullName;
 
 	// コンストラクタを定義しインスタンスフィールドに値をセット
-	Person(String name, int age, double height, double weight) {
-		this.name = name;
+	Person(String name1, String name2, int age, double height, double weight) {
+		this.name1 = name1;
+		this.name2 = name2;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
@@ -18,7 +20,7 @@ class Person {
 
 	// fullNameメソッドを定義
 	public String fullName() {
-		this.fullName = name;
+		this.fullName = name1 + name2;
 		return fullName;
 	}
 
