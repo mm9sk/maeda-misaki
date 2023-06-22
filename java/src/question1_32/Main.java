@@ -20,7 +20,11 @@ class Sub {
 	// 問題4：クラスメソッド「printCount」を定義してください（データ型：void）
 	public static void printCount() {
 		// 問題5：クラスメソッドの中にクラスフィールド「count」を用いて「合計〇〇人です」と出力してください
-		int count = 2;
+		Person person1 = new Person("鈴木太郎", 20, 1.7, 60);
+		Person person2 = new Person("山田花子", 22, 1.5, 40);
+		// クラスフィールドcountを定義
+		int count = person1.count + person2.count;
+		// コンソールに出力
 		System.out.println("合計" + count + "人です");
 	}
 }
